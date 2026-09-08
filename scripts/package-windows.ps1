@@ -14,6 +14,7 @@ Copy-Item -LiteralPath $staticRoot -Destination (Join-Path $packageRoot 'app') -
 Copy-Item -LiteralPath (Join-Path $repoRoot 'launcher-server.cjs') -Destination (Join-Path $packageRoot 'server.cjs')
 Copy-Item -LiteralPath $nodePath -Destination (Join-Path $packageRoot 'runtime/node.exe')
 Copy-Item -LiteralPath (Join-Path $repoRoot 'THIRD_PARTY_LICENSES.txt') -Destination $packageRoot
+Copy-Item -LiteralPath (Join-Path $repoRoot 'public/app-icon.ico') -Destination $packageRoot
 $nodeLicense = Join-Path (Split-Path -Parent $nodePath) 'LICENSE'
 $licenseDestination = Join-Path $packageRoot 'runtime/NODE_LICENSE.txt'
 if (Test-Path -LiteralPath $nodeLicense) {
@@ -23,7 +24,7 @@ if (Test-Path -LiteralPath $nodeLicense) {
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/nodejs/node/$nodeVersion/LICENSE" -OutFile $licenseDestination
 }
 $launcherPath = Join-Path $packageRoot 'Folsom Play Lab.exe'
-& $compilerPath /nologo /target:winexe /reference:System.Windows.Forms.dll "/out:$launcherPath" (Join-Path $repoRoot 'FolsomLauncher.cs')
+& $compilerPath /nologo /target:winexe /reference:System.Windows.Forms.dll "/win32icon:$(Join-Path $packageRoot 'app-icon.ico')" "/out:$launcherPath" (Join-Path $repoRoot 'FolsomLauncher.cs')
 if ($LASTEXITCODE -ne 0) { throw 'Launcher compilation failed.' }
 @'
 FOLSOM PLAY LAB

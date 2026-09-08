@@ -1,6 +1,21 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22 19.2727C22 20.779 20.779 22 19.2727 22H14.7273C13.221 22 12 20.779 12 19.2727V12H19.2727C20.779 12 22 13.221 22 14.7273V19.2727Z" fill="#68C4FF"/>
-<path d="M20 2C21.1046 2 22 2.89543 22 4V7C22 8.10457 21.1046 9 20 9H17C15.8954 9 15 8.10457 15 7V4C15 2.89543 15.8954 2 17 2H20Z" fill="#0C79D8"/>
-<path d="M7 15C8.10457 15 9 15.8954 9 17V20C9 21.1046 8.10457 22 7 22H4C2.89543 22 2 21.1046 2 20V17C2 15.8954 2.89543 15 4 15H7Z" fill="#0C79D8"/>
-<path d="M12 12H4.72727C3.22104 12 2 10.779 2 9.27273V4.72727C2 3.22104 3.22104 2 4.72727 2H9.27273C10.779 2 12 3.22104 12 4.72727V12Z" fill="#2E9EFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x2="0.8" y2="1"><stop stop-color="#292923"/><stop offset="1" stop-color="#080b0a"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0.85" y2="1"><stop stop-color="#f8e6ad"/><stop offset="0.5" stop-color="#cfb87c"/><stop offset="1" stop-color="#94733d"/></linearGradient>
+    <linearGradient id="ball" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4dda0"/><stop offset="1" stop-color="#b18d4d"/></linearGradient>
+  </defs>
+  <rect x="12" y="12" width="488" height="488" rx="108" fill="url(#bg)"/>
+  <rect x="23" y="23" width="466" height="466" rx="98" fill="none" stroke="#cfb87c" stroke-opacity="0.24" stroke-width="2"/>
+  <path d="M102 190 169 122 220 165 278 100 399 193" fill="none" stroke="#cfb87c" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+  <path d="m250 132 28-32 42 33-32-9-14 14-10-11Z" fill="#eee5ce" opacity="0.8"/>
+  <ellipse cx="256" cy="294" rx="182" ry="122" fill="#101611" stroke="url(#gold)" stroke-width="15"/>
+  <ellipse cx="256" cy="294" rx="157" ry="99" fill="none" stroke="#cfb87c" stroke-width="3" opacity="0.48"/>
+  <path d="M99 279 125 282m-8 64 25-10m43 65 10-25m61 39v-25m72 13-10-26m79-35-25-11m40-52-26 4" stroke="#cfb87c" stroke-width="5" opacity="0.62"/>
+  <g transform="translate(256 275) rotate(-31)">
+    <path d="M-129 0C-70-102 70-102 129 0 70 102-70 102-129 0Z" fill="#000" opacity="0.28" transform="translate(0 14)"/>
+    <path d="M-129 0C-70-102 70-102 129 0 70 102-70 102-129 0Z" fill="url(#ball)" stroke="#f8e6ad" stroke-width="3"/>
+    <path d="M-84-42Q-60 0-84 42M84-42Q60 0 84 42" fill="none" stroke="#fff2d1" stroke-width="11"/>
+    <path d="M-43 0H43" stroke="#26261f" stroke-width="8" stroke-linecap="round"/>
+    <path d="M-28-15v30M0-17v34M28-15v30" stroke="#26261f" stroke-width="8" stroke-linecap="round"/>
+  </g>
 </svg>
