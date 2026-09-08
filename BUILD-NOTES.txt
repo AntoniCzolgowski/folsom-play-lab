@@ -1,0 +1,29 @@
+DEVELOPMENT AND VERIFICATION
+
+Source uses the generated Vinext/React/TypeScript scaffold, Three.js and
+the installed Shadcn/Base UI controls. Dependencies are recorded in the lockfile.
+The distributed app is a static export served by server.cjs on loopback only.
+
+Validation completed:
+- TypeScript check completed with no errors.
+- 72 play/coverage/seed simulation combinations passed formation, trajectory,
+  bounds, deterministic replay and coverage distinction checks.
+- Packaged index and local health route returned HTTP 200.
+- Packaged WebMCP controls verified configuration, play, seek and status.
+- Invalid negative seek was rejected without changing the selected play.
+- Runtime reported ready=true, an empty error field, and approximately 50 FPS
+  in the tested balanced broadcast view. This is a sample, not a hardware guarantee.
+
+Build tooling note: Vinext completed all compilation and static prerendering
+steps and produced the distribution, but its CLI then hit a Windows libuv
+UV_HANDLE_CLOSING assertion during shutdown, with Node 24.19.0 and 24.13.0.
+The exported files were independently served and functionally verified.
+This build-tool shutdown issue does not occur in the small distributed server.
+
+The build does not download fonts or use cloud worker bindings. No hosted
+site was registered or published. The executable launcher was compiled from
+FolsomLauncher.cs using the installed .NET Framework C# compiler.
+
+Run development with the package manager and dev script in package.json.
+Run the simulation checks with a Node version supporting TypeScript stripping:
+  node --experimental-strip-types lib/simulation.test.ts
