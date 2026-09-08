@@ -2,9 +2,9 @@
 
 A local 3D football simulator set in a procedural recreation of Folsom Field in Boulder, Colorado. Choose a play and defensive coverage, snap the ball, switch cameras, and inspect routes and live charts.
 
-![Procedural Folsom Field stadium](docs/stadium-aerial.png)
+![Final Blender model of Folsom Field with spectators and campus surroundings](docs/stadium-aerial.png)
 
-*Blender rendering of the stadium architecture. The interactive app adds players, instanced fans, and play controls.*
+*Fresh render from the final Blender scene: detailed stadium architecture, campus surroundings, and 16,754 spectators. The scene contains 7,290 objects; the interactive app uses an optimized export.*
 
 ## Run on Windows
 
